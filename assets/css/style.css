@@ -1,0 +1,42 @@
+body{
+    font-family: 'Raleway', sans-serif; 
+    background-color: #597797;
+}
+
+h1{
+    font-size: 64px;
+    font-weight: bold;
+}
+h2, h3{
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.clearfix:before{
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.clearfix:after{
+    content: "";
+    clear:both;
+    display: block;
+}
+
+/* grid container */
+.grid-container{
+    display: grid;
+}
+
+/* 1 col */
+.grid-container-c1{
+    grid-template-columns: auto;
+}
+
+.item{
+    border: 1px solid black;
+}
+
+.section{
+    text-align: center;
+}
