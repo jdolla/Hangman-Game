@@ -1,3 +1,5 @@
+"use strict";
+
 document.onkeypress = function(event){
     console.log(gameState);
     if(gameState === "post-intro"){
@@ -26,6 +28,8 @@ function hideElement(name){
     element = document.getElementById(name);
     element.classList.add("hidden");
 }
+
+
 
 setTimeout(showIntroPressKey, 9000);
 var gameStates = ["intro", "post-intro"
