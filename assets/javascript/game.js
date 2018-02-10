@@ -1,38 +1,59 @@
-"use strict";
-
-document.onkeypress = function(event){
-    console.log(gameState);
-    if(gameState === "post-intro"){
-        gameState = gameStates[1];
-        hideElement("intro");
-        showElement("gameHeader");
-        showElement("gameWindow");
-    }
-}
-
-function showIntroPressKey(){
-    showElement("introPressKey");
-    gameState = "post-intro";
-}
-
-function progressGame(event){
-    showElement("introPressKey")
-}
-
-function showElement(name){
-    element = document.getElementById(name);
+function showElement(id){
+    var element = document.getElementById(id);
     element.classList.remove("hidden");
 }
 
-function hideElement(name){
-    element = document.getElementById(name);
+function hideElement(id){
+    var element = document.getElementById(id);
     element.classList.add("hidden");
 }
 
+var game = {
+    introFinished: false,
+    gameInProgress: false,
+    currentState: 0, //Set the initial state to the intro
+    wordsPlayed: 0,
+    wins: 0,
+
+    gameSpaceId: "gameWindow",
+
+    wordBank: [
+        { word: "WarGames", image: "image source", clip: "audio clip" },
+        { word: "WarGames", image: "image source", clip: "audio clip" }
+    ],
+
+    isVisible: false,
+    show: function () {
+
+    },
+
+    intro: {
+        isFinished: false,
+        elementId: "intro",
+
+        isVisible: true,
+        hide: function () {
+            hideElement(this.elementId);
+            this.isVisible = false;
+        },
+
+        finish: {
+            elementId: "introPressKey",
+            show: function(){
+                showElement(this.elementId);
+            }
+        }
+    }
+};
 
 
-setTimeout(showIntroPressKey, 9000);
-var gameStates = ["intro", "post-intro"
-    , "ready-player", "game-on"];
+setTimeout(function(){
+    showElement("introPressKey");
+    game.introFinished = true;   
+}, 9000);
 
-var gameState = gameStates[0]; //Set the game state to "intro"
+document.onkeypress = function(event){
+    if (game.introFinished) {
+        showGame();
+    }
+}
