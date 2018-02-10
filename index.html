@@ -9,25 +9,40 @@
     
     <!-- CSS & FONTS -->
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css" />
-    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Raleway" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Arbutus|Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css"/>
+
+</head>
+<body>
+    <div class="grid-container grid-container-c1">
+        <header id="gameHeader" class="header hidden">
+            <div id="header">
+                Hangman!
+            </div>
+            <div id="headerSub">
+                SciFi Edition
+            </div>
+        </header>
+        <div id="intro">
+            <img src="./assets/images/playGame.gif" alt="play game">
+            <div id="introPressKey" class="hidden">Press Any Key</div>
+        </div>
+            
+        <div id="gameWindow" class="grid-container grid-container-c2 hidden">
+            <div id="infoPanel">
+                Info Panel
+            </div>
+            <div id="gamePanel">
+                Game Panel
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; 2018 Jason Kososki
+    </footer>
 
     <!-- Script Files -->
     <script src="./assets/javascript/game.js"></script>
-</head>
-<body>
-    <div class="grid-container-c1">
-        <header class="item section headder">
-            <h1>Hangman</h1>
-            Princess Bride Edition
-        </header>
-        <div class="item section">
-            second row
-        </div>
-
-    </div>
-    <footer class="footer">
-        Footer
-    </footer>
 </body>
+
 </html>

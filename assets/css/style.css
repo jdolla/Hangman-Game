@@ -1,14 +1,57 @@
-body{
-    font-family: 'Raleway', sans-serif; 
-    background-color: #597797;
+/***************************
+
+Sticky Footer:
+(doesn't actually need bootstrap :)
+https://getbootstrap.com/docs/4.0/examples/sticky-footer/
+
+
+****************************/
+
+html {
+
+    /* --For Sticky Footers-- */
+    position: relative;
+    min-height: 100%;
 }
 
-h1{
-    font-size: 64px;
-    font-weight: bold;
+body{
+    display: flex;
+    flex-direction: column;
+
+
+    font-family: 'Roboto', sans-serif;
+    background-color: #597797;
+
+
+    /*  --For Sticky Footers-- */
+    margin-bottom: 60px; /*Match The Footer Margin*/
 }
-h2, h3{
-    font-family: 'Berkshire Swash', cursive;
+
+header{
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+
+
+    /* --For Sticky Footer-- */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;   /*Match The Body Margin*/
+    line-height: 60px;
+}
+
+#header{
+    font-weight: bolder;
+    letter-spacing: 6px;
+    font-size: 52px;
+}
+
+#headerSub{
+    font-family: 'Arbutus', cursive;
+    font-size: 24px;
 }
 
 .clearfix:before{
@@ -28,15 +71,45 @@ h2, h3{
     display: grid;
 }
 
-/* 1 col */
+/* 1 col*/
 .grid-container-c1{
     grid-template-columns: auto;
+    text-align: center;
 }
 
-.item{
+/* 2 col*/
+.grid-container-c2{
+    grid-template-columns: auto auto;
+}
+
+#gameWindow{
+    width: 960px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column-gap: 20px;
+}
+#infoPanel{
     border: 1px solid black;
 }
 
-.section{
-    text-align: center;
+#gamePanel{
+    border: 1px solid black;
+}
+
+#intro{
+    position: relative;
+    margin: 100px auto;
+}
+
+#introPressKey{
+    position: absolute;
+    top: 35%;
+    right:100px;
+    color: #597797;
+    font-family: 'Arbutus', cursive;
+}
+
+.hidden {
+    display: none;
 }
