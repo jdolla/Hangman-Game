@@ -52,6 +52,7 @@ footer {
 #headerSub{
     font-family: 'Arbutus', cursive;
     font-size: 24px;
+    margin-top: 10px;
 }
 
 .clearfix:before{
@@ -91,10 +92,13 @@ footer {
 }
 #infoPanel{
     border: 1px solid black;
+    width: 300px;
 }
 
 #gamePanel{
     border: 1px solid black;
+    width: 660px;
+    padding-top: 15px;
 }
 
 #intro{
@@ -112,4 +116,79 @@ footer {
 
 .hidden {
     display: none;
+}
+
+.place-holder {
+    border-bottom: 1px solid black;
+    display: inline-block;
+
+    width: 30px;
+    height: 18px;
+    margin: 5px 5px;
+    padding: 0 0 4px 0;
+    
+    font-family: 'Arbutus', cursive;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+#wordInPlay{
+    vertical-align: bottom;
+    margin-top: 20px;
+}
+
+#scratch {
+    font-size: 18px;
+    text-align: left;
+    width: 70%;
+    border-top: 2px dashed black;
+    margin: 50px auto 0 auto;
+    padding: 10px 0 0 0;
+}
+#playedLetters {
+    font-family: 'Arbutus', cursive;
+    margin: 20px 0;
+    letter-spacing: 15px;
+}
+#guesses{
+    font-size: 18px;
+    text-align: left;
+    width: 70%;
+    padding: 10px 0 0 0;
+    margin: 0 0 10px 0;
+}
+
+#guessesRemaining{
+    font-family: 'Arbutus', cursive;
+}
+
+#rounds{
+    margin-top: 50px;
+}
+
+#roundsRemaining {
+    font-weight: bold;
+}
+
+#playAgain{
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.moviePoster{
+    width: 172;
+    height: 250px;
+}
+
+#stats {
+    padding: 15px 10px;
+    text-align: left;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+#movies {
+    overflow-y: auto;
 }

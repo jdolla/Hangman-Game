@@ -20,7 +20,7 @@
                 Hangman!
             </div>
             <div id="headerSub">
-                SciFi Edition
+                -- SciFi Edition --
             </div>
         </header>
         <div id="intro">
@@ -30,10 +30,31 @@
             
         <div id="gameWindow" class="grid-container grid-container-c2 hidden">
             <div id="infoPanel">
-                Info Panel
+                <div id="stats">
+                    Rounds Won:&emsp;<span id="won"></span><br/>
+                    Rounds Lost:&emsp;<span id="lost"></span>
+                </div>
+                <div id="movies">
+
+                </div>
             </div>
             <div id="gamePanel">
-                Game Panel
+                <div id="wordInPlay">
+                </div>
+                <div id="scratch">
+                    <div id="guesses">
+                        Guesses Remaining:&emsp;
+                        <span id="guessesRemaining">6</span>
+                    </div>
+                    <div id="plays">
+                        Played Letters:&emsp;
+                        <span id="playedLetters"></span>
+                    </div>
+                </div>
+                <div id="rounds" class="hidden">
+                    There<span id="plural1">are</span><span id="roundsRemaining">0</span><span id="plural2">rounds</span>remaining.<br/>
+                    <span id="playAgain">Press any key to play again.</span>
+                </div>
             </div>
         </div>
     </div>
