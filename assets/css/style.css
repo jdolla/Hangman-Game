@@ -85,7 +85,7 @@ footer {
 
 #gameWindow{
     width: 960px;
-    height: 500px;
+    height: 550px;
     margin-left: auto;
     margin-right: auto;
     grid-column-gap: 20px;
@@ -178,8 +178,7 @@ footer {
 }
 
 .moviePoster{
-    width: 172;
-    height: 250px;
+    height: 150px;
 }
 
 #stats {
@@ -187,8 +186,10 @@ footer {
     text-align: left;
     line-height: 25px;
     font-weight: bold;
+    height: 55px;
 }
 
 #movies {
     overflow-y: auto;
+    height: 495px;
 }

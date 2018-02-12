@@ -288,7 +288,7 @@ var game = {
             newImage.classList.add("moviePoster");
 
             newMovie.appendChild(newImage);
-            ip.appendChild(newMovie);
+            ip.insertBefore(newMovie, ip.firstChild);
 
         }
     }
