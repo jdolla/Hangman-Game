@@ -32,6 +32,7 @@ function playAudio(clip){
     audio.play();
 }
 
+var imageBasePath = "./assets/images/";
 var intro = {
     id: "intro",
     clip: "shall-we-play-a-game.mp3",
@@ -65,6 +66,7 @@ var banner = {
 var game = {
     id: "gameWindow",
     state: "off",
+    rounds: 0,
 
     wordBank: [
         { word: "WarGames", wordUpper: null, image: "wargames.jpg", clip: "audio clip" },
@@ -214,6 +216,7 @@ var game = {
     },
 
     showWin: function(){
+        this.rounds++;
         this.infoPanel.addMovie(this.gamePanel.wordInPlay.word, true);
         this.showPlayAgain();
     },
@@ -230,8 +233,8 @@ var game = {
     },
 
     showLoss: function() {
+        this.rounds++;
         this.infoPanel.addMovie(this.gamePanel.wordInPlay.word, false);
-
         this.showPlayAgain();
     },
 
@@ -281,6 +284,20 @@ var game = {
         addMovie: function(word, isWin) {
             var ip = document.getElementById(this.id);
             var newMovie = document.createElement("DIV");
+            var p = document.createElement("P");
+
+            newMovie.classList.add("game-round");
+
+            if (isWin){
+                var won = document.getElementById("won");
+                won.innerText = parseInt(won.innerText) + 1;
+                p.innerText = "Round " + game.rounds + ": Won";
+            }
+            else {
+                var lsot = document.getElementById("lost");
+                lost.innerText = parseInt(lost.innerText) + 1;
+                p.innerText = "Round " + game.rounds + ": Lost";
+            }
 
             var newImage = document.createElement("IMG");
             newImage.setAttribute("src", imageBasePath + word.image);
@@ -288,13 +305,14 @@ var game = {
             newImage.classList.add("moviePoster");
 
             newMovie.appendChild(newImage);
+            newMovie.appendChild(p);
             ip.insertBefore(newMovie, ip.firstChild);
 
         }
     }
 };
 
-var imageBasePath = "./assets/images/";
+
 
 
 
